@@ -1,5 +1,7 @@
 package emacs
+package pbcopy
 package peco
+package pyenv
 theme batman
 theme cmorrell
 theme default
