@@ -1,0 +1,5 @@
+package emacs
+package peco
+theme batman
+theme cmorrell
+theme default
