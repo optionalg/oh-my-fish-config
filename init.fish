@@ -1,3 +1,7 @@
+# Disable creation of  python .pyc files
+# https://docs.python.org/2/using/cmdline.html#envvar-PYTHONDONTWRITEBYTECODE
+set -gx PYTHONDONTWRITEBYTECODE ""
+
 # Add cabal to PATH
 set -x PATH "$HOME/.cabal/bin/" $PATH
 

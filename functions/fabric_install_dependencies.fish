@@ -11,7 +11,7 @@ function fabric_install_dependencies
                 false
         else
                 cd /workspace/git/repos/mysql-gcs/BIN/src/wrappers/python
-                cp -r lib/python/mysql/gcs $OLD_PWD/lib/mysql
+                cp -r lib/python/mysql_gcs $OLD_PWD/lib/
         end
         cd $OLD_PWD
         set -gx PYTHONPATH $PWD/lib
