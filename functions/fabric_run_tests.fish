@@ -15,7 +15,7 @@ function fabric_run_tests
                 rm -rf build
                 python setup.py build
                 cp lib/mysql_gcs/*.so build/lib/mysql_gcs
-                python test.py $argv --build-dir=build -vvv --log-file=output.log --host=localhost --port=$storage --user=root --password="" --servers="$addresses" ^&1 | tee output.log
+                python -u test.py $argv --build-dir=build -vvv --log-file=output.log --host=localhost --port=$storage --user=root --password="" --servers="$addresses" ^&1 | tee output.log
         end
 
 end
