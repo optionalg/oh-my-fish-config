@@ -24,10 +24,10 @@ function mysql_start
                                         switch $MYSQL_ROOT_FOLDER
                                         case '*-5.6*'
                                                 echo "5.6 Server detected"
-                                                eval $MYSQL_ROOT_FOLDER/bin/mysqld --no-defaults --basedir=$BASEDIR --datadir=$DATADIR -P 1300$ID --socket=$SOCKET --server-id=$ID --gtid-mode=on --enforce-gtid-consistency=on --log-bin=bin-log --log-slave-updates --report-host=localhost --master-info-repository=TABLE
+                                                eval $MYSQL_ROOT_FOLDER/bin/mysqld --no-defaults --basedir=$BASEDIR --datadir=$DATADIR -P 1300$ID --socket=$SOCKET --server-id=$ID --gtid-mode=on --enforce-gtid-consistency=on --log-bin=bin-log --log-slave-updates --report-host=localhost --master-info-repository=TABLE --relay-log-info-repository=TABLE
                                         case '*-5.7*'
                                                 echo "5.7 server detected"
-                                                eval $MYSQL_ROOT_FOLDER/bin/mysqld --no-defaults --basedir=$BASEDIR --datadir=$DATADIR -P 1300$ID --socket=$SOCKET --server-id=$ID --gtid-mode=on --enforce-gtid-consistency=on --log-bin=bin-log --log-slave-updates --report-host=localhost --master-info-repository=TABLE
+                                                eval $MYSQL_ROOT_FOLDER/bin/mysqld --no-defaults --basedir=$BASEDIR --datadir=$DATADIR -P 1300$ID --socket=$SOCKET --server-id=$ID --gtid-mode=on --enforce-gtid-consistency=on --log-bin=bin-log --log-slave-updates --report-host=localhost --master-info-repository=TABLE --relay-log-info-repository=TABLE
                                         case '*'
                                                 echo "MySQL Version not yet supported"
                                                 false

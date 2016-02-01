@@ -24,7 +24,7 @@ function mysql_start_gr
                                         switch $MYSQL_ROOT_FOLDER
                                         case '*-5.7*'
                                                 echo "5.7 server detected"
-                                                eval $MYSQL_ROOT_FOLDER/bin/mysqld --no-defaults --basedir=$BASEDIR --datadir=$DATADIR -P 1300$ID --socket=$SOCKET --server-id=$ID --gtid-mode=on --enforce-gtid-consistency=on --log-bin=bin-log --binlog-format=row --log-slave-updates --report-host=localhost --master-info-repository=TABLE --transaction-write-set-extraction=MURMUR32 --binlog-checksum=NONE
+                                                eval $MYSQL_ROOT_FOLDER/bin/mysqld --no-defaults --basedir=$BASEDIR --datadir=$DATADIR -P 1300$ID --socket=$SOCKET --server-id=$ID --gtid-mode=on --enforce-gtid-consistency=on --log-bin=bin-log --binlog-format=row --log-slave-updates --report-host=localhost --relay-log-info-repository=TABLE --master-info-repository=TABLE --transaction-write-set-extraction=MURMUR32 --binlog-checksum=NONE --plugin-dir=lib/plugin --plugin-load=group_replication.so
                                         case '*'
                                                 echo "MySQL Version not yet supported"
                                                 false

@@ -10,7 +10,7 @@ function get_server_binaries
         cd $BINARIES_HOME
         for dir in RELEASED UPCOMING
                 cd $dir
-                for f in (echo *.tar.gz)
+                for f in *.tar.gz
                         echo "extracting " $f "..."
                         tar -xf $f
                         rm -f $f
