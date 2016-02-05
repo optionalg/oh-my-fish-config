@@ -24,10 +24,10 @@ function mysql_prepare
                                 switch $MYSQL_ROOT_FOLDER
                                         case '*-5.6*'
                                                 echo "5.6 Server detected"
-                                                eval $MYSQL_ROOT_FOLDER/scripts/mysql_install_db --no-defaults --basedir=$BASEDIR --datadir=$DATADIR
+                                                eval $MYSQL_ROOT_FOLDER/scripts/mysql_install_db --no-defaults --basedir=$BASEDIR --datadir=$DATADIR --explicit_defaults_for_timestamp
                                         case '*-5.7*'
                                                 echo "5.7 server detected"
-                                                eval $MYSQL_ROOT_FOLDER/bin/mysqld --initialize-insecure --datadir=$DATADIR --basedir=$BASEDIR
+                                                eval $MYSQL_ROOT_FOLDER/bin/mysqld --initialize-insecure --datadir=$DATADIR --basedir=$BASEDIR --explicit_defaults_for_timestamp
                                         case '*'
                                                 echo "MySQL Version not yet supported"
                                                 false
