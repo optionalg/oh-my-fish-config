@@ -11,6 +11,8 @@ function mysql_set
                         # $argv is a valid dir
                         rm -f $MYSQL_BIN_PTR
                         echo $argv > $MYSQL_BIN_PTR
+                        rm -f ~/mysql_bin_dir
+                        ln -s $argv/bin ~/mysql_bin_dir
                         echo "MySQL binary package in:'" $argv "' will be used from now on."
                 end
         end
